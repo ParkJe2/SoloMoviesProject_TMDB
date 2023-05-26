@@ -12,7 +12,7 @@
 ### 요구사항
 
 - 완성본 예시
-  https://nabacam-movies.vercel.app/
+  https://nabacam-movies.vercel.app/<br>
   **디자인은 완성본 예시와 동일할 필요 없습니다. 디자인은 자유롭게 하되, 기능적으로 요구사항을 만족시켜 주세요.**
 - (1) 필수요구사항
 
@@ -94,8 +94,8 @@
   - reduce
   - find
 - DOM 제어하기 : 하기 api 목록 중 2개 이상 사용하기
-      ```js
-      💡 1.  문서 객체 생성과 선택
+  ```js
+  💡 1. 문서 객체 생성과 선택
 
       - `document.createElement(tagName)` : 새로운 HTML 요소를 생성합니다.
       - `document.getElementById(id)` : id 속성을 기준으로 요소를 선택합니다.
@@ -124,7 +124,9 @@
       - `window.alert(message)` : 경고 메시지를 출력합니다.
       - `window.confirm(message)` : 확인 메시지를 출력하고 사용자의 답변에 따라 Boolean 값을 반환합니다.
       ```
+
   [6] github 에 작업한 코드 업로드
+
 - (2) 선택요구사항
   - CSS
     - flex 사용하기
