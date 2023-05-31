@@ -34,7 +34,7 @@ window.addEventListener("load", async () => {
 
 searchBtn.addEventListener("click", async () => {
   if (!searchIp.value) return alert("영화 제목을 입력해주세요");
-  // 빈 값인 상태에서 검색 버튼 클릭 시 알럿 노출
+  // 빈 값인 상태에서 검색 버튼 클릭 시 알럿 실행 후 종료
 
   const api = await fetch("https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1", {
     method: "GET",
@@ -45,9 +45,9 @@ searchBtn.addEventListener("click", async () => {
   });
   const { results } = await api.json();
   const searchResult = results.filter((val) => val["title"].toUpperCase().indexOf(searchIp.value.toUpperCase()) !== -1);
-  /* 영화 제목 데이터(대문자 변환)에 검색창에 입력된 값(대문자 변환)이 포함되어 있는지 확인하고, 포함되어 있을 경우 true가 반환되어 해당 요소는 필터링된 배열에 포함
-       포함되지 않았을 경우 flse를 반환하고 요소는 필터링된 배열에서 제외됨 */
-  if (searchResult.lenghth == 0) return alert("검색어에 일치하는 영화가 없습니다.");
+  /* 영화 제목 데이터에 검색창에 입력된 값이 포함된 객체만 추출하여 배열 생성*/
+  /* toUpperCase() 대문자 변환 */
+  if (searchResult.length == 0) return alert("검색어에 일치하는 영화가 없습니다.");
   /* 검색어에 일치하는 영화가 없을 경우 알럿 노출 */
 
   movieList.innerHTML = "";
@@ -64,7 +64,6 @@ searchBtn.addEventListener("click", async () => {
     `;
   });
 });
-// onclick="alert() : 클릭 시 알럿 노출
 
 searchIp.addEventListener("keyup", async (event) => {
   if (event.keyCode === 13) {
@@ -72,6 +71,7 @@ searchIp.addEventListener("keyup", async (event) => {
   }
 });
 // searchIp에서 Enter키 클릭 시 searchBtn 클릭 동작 이벤트
+// 엔터키(key code 13)가 입력되었을 경우 searchBtn 클릭 실행
 
 topBtn.onclick = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
