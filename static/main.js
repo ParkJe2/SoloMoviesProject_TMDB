@@ -4,6 +4,10 @@ const movieList = document.querySelector("#movieList");
 const upBtn = document.querySelector("#upBtn");
 
 window.addEventListener("load", async () => {
+  searchIp.focus();
+  // 페이지 로딩 시 포커스 input으로 이동
+  // + 다른방법) html input 태그에 autofocus 추가하기
+
   const api = await fetch("https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1", {
     method: "GET",
     headers: {
@@ -64,12 +68,10 @@ searchBtn.addEventListener("click", async () => {
 
 searchIp.addEventListener("keyup", async (event) => {
   if (event.keyCode === 13) {
-    event.preventDefault();
     await searchBtn.click();
   }
 });
 // searchIp에서 Enter키 클릭 시 searchBtn 클릭 동작 이벤트
-// preventDefault() : 이벤트 실행 시 창 새로고침 되지 않게 막기
 
 topBtn.onclick = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
