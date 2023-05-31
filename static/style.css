@@ -36,6 +36,7 @@ body {
   background-color: var(--body-bg-color);
   width: 100%;
   margin: 0px auto;
+  height: 100%;
 }
 
 .main {
@@ -61,6 +62,14 @@ body {
   font-weight: 600;
   font-size: 35px;
   text-decoration: none;
+  text-align: center;
+}
+
+.title:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: 38px;
+  font-weight: 900;
 }
 
 .logo {
@@ -93,6 +102,14 @@ body {
   border-radius: var(--radius-15);
 }
 
+.searchIp:hover {
+  outline: 3px solid var(--primary-sub-color);
+}
+
+.searchIp:focus {
+  outline: 3px solid var(--primary-sub-color);
+}
+
 .searchBtn {
   margin-left: 15px;
 
@@ -104,6 +121,11 @@ body {
   border-radius: var(--radius-15);
 }
 
+.searchBtn:hover {
+  font-weight: 600;
+  background-color: var(--primary-sub-color);
+}
+
 .movieList {
   margin: 20px auto;
   display: grid;
@@ -112,11 +134,17 @@ body {
   /* 간격 */
   grid-gap: 55px;
   justify-content: center;
+
+  padding-bottom: 90px;
 }
 
 .cards {
   border: 3px solid #fff;
   cursor: pointer;
+}
+
+.cards:hover {
+  border: 3px solid var(--primary-sub-color);
 }
 
 .card-body {
@@ -142,8 +170,8 @@ body {
   position: fixed;
   bottom: 30px;
   right: 40px;
-  display: flex;
-
+  /* 요소 중 가장 앞쪽에 배치 */
+  z-index: 999;
   color: #fff;
 }
 
@@ -152,8 +180,39 @@ body {
 }
 
 .footer {
-  margin-top: 70px;
+  position: relative;
+  bottom: 0;
+  padding-top: 5px;
   background-color: var(--primary-sub-color);
   width: 100%;
   height: 90px;
+}
+
+.footer > p {
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+.footer > span {
+  color: #454545;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.blogBtn {
+  color: var(--primary-color);
+}
+
+.githubBtn {
+  margin-left: 10px;
+  color: var(--primary-color);
 }
