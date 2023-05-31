@@ -62,6 +62,7 @@ body {
   font-weight: 600;
   font-size: 35px;
   text-decoration: none;
+  text-align: center;
 }
 
 .title:hover {
@@ -90,9 +91,6 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
-  min-height: 100%;
-  position: relative;
 }
 
 .searchIp {
@@ -172,7 +170,6 @@ body {
   position: fixed;
   bottom: 30px;
   right: 40px;
-  display: flex;
   /* 요소 중 가장 앞쪽에 배치 */
   z-index: 999;
   color: #fff;
