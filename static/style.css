@@ -63,6 +63,13 @@ body {
   text-decoration: none;
 }
 
+.title:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: 38px;
+  font-weight: 900;
+}
+
 .logo {
   width: 60px;
   padding-right: 10px;
@@ -93,6 +100,14 @@ body {
   border-radius: var(--radius-15);
 }
 
+.searchIp:hover {
+  outline: 3px solid var(--primary-sub-color);
+}
+
+.searchIp:focus {
+  outline: 3px solid var(--primary-sub-color);
+}
+
 .searchBtn {
   margin-left: 15px;
 
@@ -102,6 +117,11 @@ body {
   border: none;
   outline: none;
   border-radius: var(--radius-15);
+}
+
+.searchBtn:hover {
+  font-weight: 600;
+  background-color: var(--primary-sub-color);
 }
 
 .movieList {
@@ -117,6 +137,10 @@ body {
 .cards {
   border: 3px solid #fff;
   cursor: pointer;
+}
+
+.cards:hover {
+  border: 3px solid var(--primary-sub-color);
 }
 
 .card-body {
@@ -153,7 +177,37 @@ body {
 
 .footer {
   margin-top: 70px;
+  padding-top: 5px;
   background-color: var(--primary-sub-color);
   width: 100%;
   height: 90px;
+}
+
+.footer > p {
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+.footer > span {
+  color: #454545;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.blogBtn {
+  color: var(--primary-color);
+}
+
+.githubBtn {
+  margin-left: 10px;
+  color: var(--primary-color);
 }
