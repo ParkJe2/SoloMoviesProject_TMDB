@@ -36,6 +36,7 @@ body {
   background-color: var(--body-bg-color);
   width: 100%;
   margin: 0px auto;
+  height: 100%;
 }
 
 .main {
@@ -89,6 +90,9 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
+  min-height: 100%;
+  position: relative;
 }
 
 .searchIp {
@@ -132,6 +136,8 @@ body {
   /* 간격 */
   grid-gap: 55px;
   justify-content: center;
+
+  padding-bottom: 90px;
 }
 
 .cards {
@@ -167,7 +173,8 @@ body {
   bottom: 30px;
   right: 40px;
   display: flex;
-
+  /* 요소 중 가장 앞쪽에 배치 */
+  z-index: 999;
   color: #fff;
 }
 
@@ -176,7 +183,7 @@ body {
 }
 
 .footer {
-  margin-top: 70px;
+  position: absolute;
   padding-top: 5px;
   background-color: var(--primary-sub-color);
   width: 100%;
