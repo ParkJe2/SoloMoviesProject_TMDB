@@ -129,7 +129,7 @@ body {
 .movieList {
   margin: 20px auto;
   display: grid;
-  /* 280px 크기의 카드 5개 정렬(가로) */
+  /* 280px 크기의 카드 4개 정렬(가로) */
   grid-template-columns: repeat(4, 280px);
   /* 간격 */
   grid-gap: 55px;
