@@ -24,7 +24,7 @@ window.addEventListener("load", async () => {
         <img src="https://image.tmdb.org/t/p/original/${result["poster_path"]}" class="card-img-top" />
         <div class="card-body">
           <h5 class="card-title">${result.title}</h5>
-          <p>Rating : ${result["vote_average"]}</p>
+          <p class="card-star">⭐️ ${result["vote_average"]}</p>
           <p class="card-text">${result.overview}</p>
         </div>
   </div>
@@ -57,7 +57,7 @@ searchBtn.addEventListener("click", async () => {
     <img src="https://image.tmdb.org/t/p/original/${result["poster_path"]}" class="card-img-top" />
     <div class="card-body">
       <h5 class="card-title">${result.title}</h5>
-      <p>Rating : ${result["vote_average"]}</p>
+      <p class="card-star">⭐️ ${result["vote_average"]}</p>
       <p class="card-text">${result.overview}</p>
     </div>
 </div>
