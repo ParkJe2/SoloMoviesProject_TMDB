@@ -1,7 +1,7 @@
-const searchIp = document.querySelector("#searchIp");
-const searchBtn = document.querySelector("#searchBtn");
-const movieList = document.querySelector("#movieList");
-const upBtn = document.querySelector("#upBtn");
+const searchIp = document.querySelector(".searchIp");
+const searchBtn = document.querySelector(".searchBtn");
+const movieList = document.querySelector(".movieList");
+const upBtn = document.querySelector(".upBtn");
 
 window.addEventListener("load", async () => {
   searchIp.focus();
@@ -19,15 +19,16 @@ window.addEventListener("load", async () => {
   // { results } {} 사용 시 변수 이름 사용과 동시에 서버에서 받아온 api.json 결과에 results라는 키 값을 가져온다.
 
   results.forEach((result) => {
-    movieList.innerHTML += `<div onclick="alert('영화 ID : ${result.id}')" class="movie-box">
-        <div class="card h-100 cards">
-        <img src="https://image.tmdb.org/t/p/original/${result["poster_path"]}" class="card-img-top" />
-        <div class="card-body">
+    movieList.innerHTML += `<li class="movie-box" onclick="alert('영화 ID : ${result.id}')">
+        <div class="image-box">
+        <img src="https://image.tmdb.org/t/p/original/${result["poster_path"]}" class="card-image" />
+        </div>
+        <div class="title-box">
           <h5 class="card-title">${result.title}</h5>
           <p class="card-star">⭐️ ${result["vote_average"]}</p>
+          </div>
           <p class="card-text">${result.overview}</p>
-        </div>
-  </div>
+  </li>
     `;
   });
 });
@@ -52,16 +53,17 @@ searchBtn.addEventListener("click", async () => {
 
   movieList.innerHTML = "";
   searchResult.forEach((result) => {
-    movieList.innerHTML += `<div onclick="alert('영화 ID : ${result.id}')" class="movie-box">
-    <div class="card h-100 cards">
-    <img src="https://image.tmdb.org/t/p/original/${result["poster_path"]}" class="card-img-top" />
-    <div class="card-body">
+    movieList.innerHTML += `<li class="movie-box" onclick="alert('영화 ID : ${result.id}')">
+    <div class="image-box">
+    <img src="https://image.tmdb.org/t/p/original/${result["poster_path"]}" class="card-image" />
+    </div>
+    <div class="title-box">
       <h5 class="card-title">${result.title}</h5>
       <p class="card-star">⭐️ ${result["vote_average"]}</p>
+      </div>
       <p class="card-text">${result.overview}</p>
-    </div>
-</div>
-    `;
+</li>
+`;
   });
 });
 
