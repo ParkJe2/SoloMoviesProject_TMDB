@@ -67,9 +67,9 @@ searchBtn.addEventListener("click", async () => {
   });
 });
 
-searchIp.addEventListener("keyup", async (event) => {
+searchIp.addEventListener("keyup", (event) => {
   if (event.keyCode === 13) {
-    await searchBtn.click();
+    searchBtn.click();
   }
 });
 // searchIp에서 Enter키 클릭 시 searchBtn 클릭 동작 이벤트
