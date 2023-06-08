@@ -131,12 +131,13 @@ body {
 }
 
 .movie-box:hover {
-  border: 5px solid var(--primary-sub-color);
+  outline: 5px solid var(--primary-sub-color);
 }
 
 .card-image {
   width: 95%;
   height: 100%;
+  padding-right: 5px;
   margin: 10px 0px 0px 10px;
   border-radius: var(--radius-15);
 }
